@@ -17,19 +17,21 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
     display: flex;
+    max-width: 1200px;
 }
 
 /* left side*/
 .left {
     background-color: #978bb7 ;
     color: white;
-    width: 470px;
-    min-width: 470px;
-    height: 470px;
+    /*width: 470px;*/
+    /*min-width: 470px;*/
+    /*height: 470px;*/
     padding: 30px;
 }
 .left h1 {
@@ -66,8 +68,9 @@ body {
 
 /* right side*/
 .right {
-    max-width: 660px;
-    padding: 20px 40px;
+    /*max-width: 660px;*/
+    flex: 1.4;
+    padding: 20px 0 20px 40px;
     margin-left: 30px;
 }
 
@@ -101,4 +104,27 @@ body {
 }
 .right .btn:hover {
     background-color: rgb(249, 147, 112);
+}
+
+@media screen and (max-width: 1032px) {
+    .right {
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 920px) {
+    .right {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .container {
+        flex-direction: column;
+    }
+    body {
+        padding: 10px;
+    }
+    .right p {
+        margin: 10px 0;
+    }
 }
